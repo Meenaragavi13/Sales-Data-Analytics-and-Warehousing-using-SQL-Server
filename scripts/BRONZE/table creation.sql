@@ -7,7 +7,7 @@ Create Table bronze.crm_cust_info(
 	cst_key NVARCHAR(50),
 	cst_firstname NVARCHAR(50),
 	cst_lastname NVARCHAR(50),
-	cst_material_status NVARCHAR(50),
+	cst_martial_status NVARCHAR(50),
 	cst_gndr NVARCHAR(50),
 	cst_create_date DATE
 );
@@ -25,8 +25,8 @@ Create table bronze.crm_prod_info(
 );
 
 
-IF OBJECT_ID ('bronze.crm_cust_info','U') IS NOT NULL
-       DROP TABLE bronze.crm_cust_info
+IF OBJECT_ID ('bronze.crm_sales_details','U') IS NOT NULL
+       DROP TABLE bronze.crm_sales_details
 Create table bronze.crm_sales_details(
 	sls_ord_num NVARCHAR(50),
 	sls_prd_key NVARCHAR(50),
