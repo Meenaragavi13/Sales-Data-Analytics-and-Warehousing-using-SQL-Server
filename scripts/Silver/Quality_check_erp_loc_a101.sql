@@ -1,0 +1,17 @@
+SELECT
+REPLACE(CID,'-','') AS CID,
+CNTRY
+FROM BRONZE.erp_loc_a101;
+
+SELECT CST_KEY FROM SILVER.crm_cust_info;
+
+--Connect Check
+SELECT
+REPLACE(CID,'-','') AS CID,
+CNTRY
+FROM BRONZE.erp_loc_a101
+WHERE REPLACE(CID,'-','') NOT IN
+(SELECT CST_KEY FROM SILVER.crm_cust_info);
+
+SELECT DISTINCT CNTRY FROM 
+Bronze.erp_loc_a101;
